@@ -2,9 +2,11 @@ import { Box, Text } from "@chakra-ui/react";
 import theme from "../theme";
 import MContainer from "../component/container";
 import Button from "../component/button";
+import { useNavigate } from "react-router-dom";
 
 const SuccesPage: React.FC = () => {
   const { pxToVw, colors } = theme;
+  const navigate = useNavigate();
   return (
     <Box pt={pxToVw(40)} minH={"90vh"}>
       <MContainer>
@@ -29,7 +31,7 @@ const SuccesPage: React.FC = () => {
           as possible. <br />
           Thank you for your patience.
         </Text>
-        <Button>Top</Button>
+        <Button onClick={() => navigate("/")}>Top</Button>
       </MContainer>
     </Box>
   );
