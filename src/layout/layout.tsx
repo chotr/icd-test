@@ -1,13 +1,17 @@
 import { Outlet } from "react-router-dom";
 import Header from "../header";
-import { Box } from "@chakra-ui/react";
+import { Box, Flex, VStack } from "@chakra-ui/react";
+import Footer from "../footer";
 
 const Layout: React.FC = () => {
   return (
-    <Box>
+    <>
       <Header />
-      <Outlet></Outlet>
-    </Box>
+      <Box as={"main"} minH={'80vh'} flex={1}>
+        <Outlet></Outlet>
+      </Box>
+      <Footer />
+    </>
   );
 };
 
